@@ -9,11 +9,11 @@ import {
 } from "./components/icons";
 import SearchBar from "./components/SearchBar";
 
-function Navbar() {
+const Navbar = ({ collapse, setCollapse }) => {
   return (
     <nav className="flex flex-row justify-between items-center px-5">
       <div className="flex items-center my-3">
-        <button className="nav-icon">
+        <button className="nav-icon" onClick={() => setCollapse(!collapse)}>
           <MenuButton />
         </button>
         <div className="flex items-center cursor-pointer">
@@ -40,6 +40,6 @@ function Navbar() {
       </div>
     </nav>
   );
-}
+};
 
 export default Navbar;

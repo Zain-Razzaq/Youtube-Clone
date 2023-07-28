@@ -3,10 +3,7 @@ import MenuItem from "./components/MenuItem";
 
 const MenuBar = ({ collapse }) => {
   return (
-    <div
-      className={`p-2  divide-y h-screen overflow-scroll
-      ${collapse ? "w-[6%]" : "w-[15%]"}`}
-    >
+    <div className={"p-2  divide-y h-screen overflow-scroll"}>
       <div className="my-2">
         <MenuItem
           icon={<HomeIcon selected />}

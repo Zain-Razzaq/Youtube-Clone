@@ -1,0 +1,15 @@
+.nav-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0.4rem;
+  border-radius: 50%;
+  padding: 0.2rem;
+  cursor: pointer;
+}
+
+.nav-icon:hover {
+  background-color: #eee;
+}

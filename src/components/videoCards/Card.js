@@ -18,10 +18,9 @@ const Card = ({
       </div>
       <div className="flex my-2">
         <img
-          className="w-10 h-10 rounded-full"
+          className="w-10 h-10 rounded-full cursor-pointer"
           src={channelImage}
           alt="profile"
-          cursor-pointer
         />
         <div className="mx-1">
           <h3 className=" h-12 w-[345px] font-medium line-clamp-2 cursor-pointer">

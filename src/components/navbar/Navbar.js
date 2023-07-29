@@ -1,3 +1,6 @@
+import { useContext } from "react";
+import { useNavigate } from "react-router";
+
 import "./Navbar.css";
 import {
   CreateVideoIcon,
@@ -8,15 +11,21 @@ import {
   ProfileIcon,
 } from "./components/icons";
 import SearchBar from "./components/SearchBar";
+import { collapseContext } from "../../App";
 
-const Navbar = ({ collapse, setCollapse }) => {
+const Navbar = () => {
+  const [collapse, setCollapse] = useContext(collapseContext);
+  const navigate = useNavigate();
   return (
     <nav className="flex flex-row justify-between items-center px-5">
       <div className="flex items-center my-3">
         <button className="nav-icon" onClick={() => setCollapse(!collapse)}>
           <MenuButton />
         </button>
-        <div className="flex items-center cursor-pointer">
+        <div
+          className="flex items-center cursor-pointer"
+          onClick={() => navigate("/")}
+        >
           <YoutubeIcon />
           <span className="text-gray-500 text-xs mb-4">PK</span>
         </div>

@@ -1,9 +1,15 @@
-const MenuItem = ({ icon, title, selected, collapse }) => {
+import { useContext } from "react";
+
+import { collapseContext } from "../../../App";
+
+const MenuItem = ({ icon, title, selected }) => {
+  const [collapse] = useContext(collapseContext);
+
   return (
     <div
-      className={`flex items-center rounded-lg hover:bg-neutral-100 cursor-pointer 
+      className={`flex  items-center rounded-lg hover:bg-neutral-100 cursor-pointer 
       ${selected && "bg-neutral-100"}
-      ${collapse ? `h-20 flex-col justify-center` : `px-2 h-10`}`}
+      ${collapse ? `h-20 flex-col justify-center w-16` : `px-2 h-10 w-52`}`}
     >
       <div className="px-1">{icon}</div>
       <span

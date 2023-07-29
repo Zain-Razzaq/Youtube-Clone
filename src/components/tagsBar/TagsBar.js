@@ -14,16 +14,19 @@ const TAGS = [
   "MongoDB",
   "Mongoose",
   "GraphQL",
-  "Apollo",
   "PostgreSQL",
   "SQL",
   "Python",
   "Django",
   "Flask",
+  "Java",
+  "C",
+  "C++",
   "Ruby",
   "Ruby on Rails",
   "Git",
   "GitHub",
+  "GitLab",
 ];
 
 const TagsBar = () => {

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const getVideosData = () => {
+const getVideosDataFromAPI = () => {
   return axios
     .get("https://youtube.googleapis.com/youtube/v3/videos", {
       params: {
@@ -14,4 +14,4 @@ const getVideosData = () => {
     .then((res) => res.data);
 };
 
-export { getVideosData };
+export { getVideosDataFromAPI };

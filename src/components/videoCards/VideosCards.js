@@ -12,7 +12,7 @@ const VideosCards = () => {
           id,
           title,
           channelTitle,
-          publishedAt,
+          timePassedSinceUpload,
           thumbnail,
           viewCount,
           duration,
@@ -24,7 +24,7 @@ const VideosCards = () => {
             channelName={channelTitle}
             channelImage={thumbnail}
             views={viewCount}
-            time={publishedAt}
+            time={timePassedSinceUpload}
             duration={duration}
           />
         )

@@ -27,16 +27,17 @@ const SearchedVideoCard = ({
         <p className="text-slate-500 text-sm font-normal">
           {views} views • {time} ago
         </p>
-        <div className="flex items-center gap-1 my-2">
+        <div className="flex items-center gap-1 my-3">
           <img
             className="w-8 h-8 rounded-full cursor-pointer"
             src={channelImage}
             alt="profile"
           />
-          <div className="text-slate-500 text-sm font-normal">
-            <p className="cursor-pointer">{channelName}</p>
-          </div>
+          <p className="text-slate-500 text-sm font-normal cursor-pointer">
+            {channelName}
+          </p>
         </div>
+        <p className="text-slate-500 text-sm font-normal">{description}</p>
       </div>
     </div>
   );

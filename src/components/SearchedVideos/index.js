@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import SearchedVideoCard from "./SearchedVideoCard";
 
 const SearchedVideos = () => {
-  const videosData = useSelector((state) => state.videosData);
+  const videosData = useSelector((state) => state.searchedVideosData);
 
   return (
     <div className="mt-14">

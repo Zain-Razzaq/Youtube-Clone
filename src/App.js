@@ -1,7 +1,4 @@
-import { useState } from "react";
-
-import Navbar from "./components/Navbar";
-import AllRoutes from "./AllRoutes";
+import AllRoutes from "./AppRoutes";
 
 function App() {
   return (

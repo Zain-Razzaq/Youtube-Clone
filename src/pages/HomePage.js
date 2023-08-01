@@ -1,14 +1,15 @@
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 
-import VideosCards from "../components/VideoCards";
 import { getVideosDataFromAPI } from "../apiEndPoints";
-import { updateVideosData } from "../store/reducer";
+import { updateVideosData } from "../store/homePageReducer";
 import {
   getViewsInFormat,
   getTimeInFormat,
   getDurationInFormat,
 } from "../utils/utils";
+
+import VideosCards from "../components/VideoCards";
 import LayoutBase from "../components/LayoutBase";
 import TagsBar from "../components/TagsBar";
 
@@ -40,6 +41,7 @@ const HomePage = () => {
 
   useEffect(() => {
     getVideosDataForHomePage();
+    return () => dispatch(updateVideosData([]));
   }, []);
 
   return (

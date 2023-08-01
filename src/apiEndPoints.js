@@ -14,4 +14,17 @@ const getVideosDataFromAPI = () => {
     .then((res) => res.data);
 };
 
-export { getVideosDataFromAPI };
+const getVideosDataForSearch = (query) => {
+  return axios
+    .get("https://youtube.googleapis.com/youtube/v3/search", {
+      params: {
+        part: "snippet",
+        q: query,
+        maxResults: 30,
+        key: process.env.REACT_APP_YOUTUBE_API_KEY,
+      },
+    })
+    .catch((error) => console.log(error));
+};
+
+export { getVideosDataFromAPI, getVideosDataForSearch };

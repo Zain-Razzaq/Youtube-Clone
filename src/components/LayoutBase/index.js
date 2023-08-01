@@ -10,7 +10,7 @@ const LayoutBase = ({ children }) => {
   const [collapse, setCollapse] = useState(false);
 
   return (
-    <div>
+    <>
       <collapseContext.Provider value={[collapse, setCollapse]}>
         <Navbar />
         <MenuBar />
@@ -20,7 +20,7 @@ const LayoutBase = ({ children }) => {
           {children}
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

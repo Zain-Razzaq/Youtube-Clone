@@ -1,26 +1,28 @@
 import { useSelector } from "react-redux";
 
-import Card from "./Card";
+import SearchedVideoCard from "./SearchedVideoCard";
 
-const VideosCards = () => {
+const SearchedVideos = () => {
   const videosData = useSelector((state) => state.videosData);
 
   return (
-    <div className="flex flex-wrap">
+    <div className="mt-14">
       {videosData.map(
         ({
           id,
           title,
+          description,
           channelTitle,
           timePassedSinceUpload,
           thumbnail,
           viewCount,
           duration,
         }) => (
-          <Card
+          <SearchedVideoCard
             key={id}
             image={thumbnail}
             title={title}
+            description={description}
             channelName={channelTitle}
             channelImage={thumbnail}
             views={viewCount}
@@ -33,4 +35,4 @@ const VideosCards = () => {
   );
 };
 
-export default VideosCards;
+export default SearchedVideos;

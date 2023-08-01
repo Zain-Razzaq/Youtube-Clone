@@ -7,7 +7,7 @@ const getVideosDataFromAPI = () => {
         part: "snippet, statistics , contentDetails",
         chart: "mostPopular",
         maxResults: 30,
-        regionCode: "PK",
+        regionCode: "US",
         key: process.env.REACT_APP_YOUTUBE_API_KEY,
       },
     })

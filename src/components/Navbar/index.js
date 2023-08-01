@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { useNavigate } from "react-router";
 
-import "./Navbar.css";
+import "./index.css";
 import {
   CreateVideoIcon,
   MenuButton,
@@ -9,15 +9,15 @@ import {
   YoutubeIcon,
   NotificationIcon,
   ProfileIcon,
-} from "./components/icons";
-import SearchBar from "./components/SearchBar";
-import { collapseContext } from "../../App";
+} from "./icons";
+import SearchBar from "./SearchBar";
+import { collapseContext } from "../LayoutBase/index";
 
 const Navbar = () => {
   const [collapse, setCollapse] = useContext(collapseContext);
   const navigate = useNavigate();
   return (
-    <nav className="flex flex-row justify-between items-center px-5">
+    <nav className="flex flex-row justify-between items-center px-5 fixed w-full z-10 bg-white">
       <div className="flex items-center my-3">
         <button className="nav-icon" onClick={() => setCollapse(!collapse)}>
           <MenuButton />

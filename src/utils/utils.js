@@ -31,6 +31,6 @@ const getDurationInFormat = (duration) => {
 
   if (hours !== "00") return `${hours}:${minutes}:${seconds}`;
   if (minutes !== "00") return `${minutes}:${seconds}`;
-  if (seconds) return `00:${seconds}`;
+  return `00:${seconds}`;
 };
 export { getViewsInFormat, getTimeInFormat, getDurationInFormat };

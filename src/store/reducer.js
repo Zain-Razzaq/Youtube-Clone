@@ -4,9 +4,7 @@ const videosData = createSlice({
   name: "videosData",
   initialState: [],
   reducers: {
-    updateVideosData: (state, { payload }) => {
-      return payload;
-    },
+    updateVideosData: (_, { payload }) => payload,
   },
 });
 

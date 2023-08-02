@@ -1,31 +1,27 @@
 import { useSelector } from "react-redux";
 
-import SearchedVideoCard from "./SearchedVideoCard";
+import SuggestedCard from "./SuggestedCard";
 
-const SearchedVideos = () => {
-  const videosData = useSelector((state) => state.searchedVideosData);
+const SuggestedVideos = () => {
+  const videosData = useSelector((state) => state.suggestedVideosData);
 
   return (
-    <div className="mt-14">
+    <div>
       {videosData.map(
         ({
           id,
           title,
-          description,
           channelTitle,
           timePassedSinceUpload,
           thumbnail,
           viewCount,
           duration,
         }) => (
-          <SearchedVideoCard
+          <SuggestedCard
             key={id}
-            id={id}
             image={thumbnail}
             title={title}
-            description={description}
             channelName={channelTitle}
-            channelImage={thumbnail}
             views={viewCount}
             time={timePassedSinceUpload}
             duration={duration}
@@ -36,4 +32,4 @@ const SearchedVideos = () => {
   );
 };
 
-export default SearchedVideos;
+export default SuggestedVideos;

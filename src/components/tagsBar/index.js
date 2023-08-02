@@ -31,12 +31,10 @@ const TAGS = [
 
 const TagsBar = () => {
   return (
-    <div>
-      <div className=" whitespace-nowrap z-10 p-2 bg-white fixed w-[82%] flex items-center justify-between overflow-scroll  no-scrollbar ">
-        {TAGS.map((tag) => (
-          <Tag key={tag} tagContent={tag} />
-        ))}
-      </div>
+    <div className=" whitespace-nowrap z-10 p-2 bg-white fixed w-[82%] flex items-center justify-between overflow-scroll  no-scrollbar ">
+      {TAGS.map((tag) => (
+        <Tag key={tag} tagContent={tag} />
+      ))}
     </div>
   );
 };

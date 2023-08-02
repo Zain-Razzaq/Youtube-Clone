@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { createContext } from "react";
 
-import MenuBar from "../MenuBar";
-import Navbar from "../Navbar";
+import MenuBar from "./MenuBar";
+import Navbar from "./Navbar";
 
 export const collapseContext = createContext();
 

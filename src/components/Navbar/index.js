@@ -11,7 +11,7 @@ import {
   ProfileIcon,
 } from "./icons";
 import SearchBar from "./SearchBar";
-import { collapseContext } from "../LayoutBase/index";
+import { collapseContext } from "../LayoutBase";
 
 const Navbar = () => {
   const [collapse, setCollapse] = useContext(collapseContext);

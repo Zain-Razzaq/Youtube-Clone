@@ -1,4 +1,7 @@
+import { useNavigate } from "react-router-dom";
+
 const SearchedVideoCard = ({
+  id,
   image,
   title,
   description,
@@ -8,8 +11,10 @@ const SearchedVideoCard = ({
   time,
   duration,
 }) => {
+  const navigate = useNavigate();
+
   return (
-    <div className="flex h-52  m-2 ">
+    <div className="flex h-52  m-2 " onClick={() => navigate(`/watch/${id}`)}>
       <div className=" w-96 cursor-pointer relative group">
         <img
           className="max-h-full w-full object-cover rounded-lg"

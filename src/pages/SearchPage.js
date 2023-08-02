@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 
 import SearchedVideos from "../components/SearchedVideos";
 import TagsBar from "../components/TagsBar";
-import LayoutBase from "../components/LayoutBase/index";
+import LayoutBase from "../components/LayoutBase";
 
 import { getVideosDataForSearch } from "../apiEndPoints";
 import { updateSearhedVideos } from "../store/searchPageReducers";

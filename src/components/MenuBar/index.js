@@ -3,7 +3,7 @@ import MenuItem from "./MenuItem";
 
 const MenuBar = () => {
   return (
-    <div className="p-2 mt-16 divide-y h-screen overflow-scroll fixed">
+    <div className="p-2 mt-16 bg-white divide-y h-screen overflow-scroll fixed">
       <div className="my-2">
         <MenuItem icon={<HomeIcon selected />} title="Home" selected />
         <MenuItem icon={<ShortsIcon />} title="Shorts" />

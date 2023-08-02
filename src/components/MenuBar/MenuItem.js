@@ -1,6 +1,6 @@
 import { useContext } from "react";
 
-import { collapseContext } from "../LayoutBase/index";
+import { collapseContext } from "../LayoutBase";
 
 const MenuItem = ({ icon, title, selected }) => {
   const [collapse] = useContext(collapseContext);

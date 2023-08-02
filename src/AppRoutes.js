@@ -2,12 +2,15 @@ import { Route, Routes } from "react-router-dom";
 
 import HomePage from "./pages/HomePage";
 import SearchPage from "./pages/SearchPage";
+import WatchPage from "./pages/WatchPage";
 
 const AllRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/search/:searchQuery" element={<SearchPage />} />
+      <Route path="/watch/:videoId" element={<WatchPage />} />
+      {/* dug56u8NN7g */}
     </Routes>
   );
 };

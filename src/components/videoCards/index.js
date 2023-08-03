@@ -8,6 +8,7 @@ import Button from "../Button";
 const VideosCards = () => {
   const [currentPage, setCurrentPage] = useState(0);
   const videosData = useSelector((state) => state.videosData);
+  const favoriteVideos = useSelector((state) => state.favoriteVideos);
   const startIndex = currentPage * NO_OF_VIDEOS_PER_PAGE;
   const totalNumerOfPages = Math.ceil(
     videosData.length / NO_OF_VIDEOS_PER_PAGE
@@ -39,6 +40,7 @@ const VideosCards = () => {
                   views={viewCount}
                   time={timePassedSinceUpload}
                   duration={duration}
+                  favorite={favoriteVideos.includes(id)}
                 />
               )
             )}

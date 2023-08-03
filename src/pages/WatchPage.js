@@ -35,7 +35,6 @@ const WatchPage = () => {
   };
   const getSuggestedVideosFromAPI = async () => {
     const videoData = await getVideoById(videoId);
-    console.log(videoData);
     const data = await getVidoesByCategory(videoData.snippet.categoryId);
     data && dispatch(updateSuggestedVideos(data.items.map(sliceRequiredData)));
   };
@@ -43,7 +42,7 @@ const WatchPage = () => {
   useEffect(() => {
     getSuggestedVideosFromAPI();
     return () => dispatch(updateSuggestedVideos([]));
-  }, []);
+  }, [videoId]);
 
   return (
     <LayoutBase>

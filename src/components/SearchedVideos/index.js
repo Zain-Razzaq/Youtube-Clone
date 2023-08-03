@@ -15,8 +15,6 @@ const SearchedVideos = () => {
           channelTitle,
           timePassedSinceUpload,
           thumbnail,
-          viewCount,
-          duration,
         }) => (
           <SearchedVideoCard
             key={id}
@@ -26,9 +24,7 @@ const SearchedVideos = () => {
             description={description}
             channelName={channelTitle}
             channelImage={thumbnail}
-            views={viewCount}
             time={timePassedSinceUpload}
-            duration={duration}
           />
         )
       )}

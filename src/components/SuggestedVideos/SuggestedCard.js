@@ -1,4 +1,7 @@
+import { useNavigate } from "react-router-dom";
+
 const SuggestedCard = ({
+  id,
   image,
   title,
   channelName,
@@ -6,15 +9,19 @@ const SuggestedCard = ({
   time,
   duration,
 }) => {
+  const navigate = useNavigate();
   return (
     <div className="flex h-24 m-2">
-      <div className=" w-40 cursor-pointer relative group">
+      <div
+        className=" w-40 cursor-pointer relative group"
+        onClick={() => navigate(`/watch/${id}`)}
+      >
         <img
           className="max-h-full w-full object-cover rounded-lg"
           src={image}
           alt="thumbnail"
         />
-        <span className="absolute bottom-3 right-1 p-0.5 bg-slate-950/75 rounded-md text-white text-xs group-hover:hidden">
+        <span className="absolute bottom-1 right-1 p-0.5 bg-slate-950/75 rounded-md text-white text-xs group-hover:hidden">
           {duration}
         </span>
       </div>

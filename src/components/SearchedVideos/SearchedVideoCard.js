@@ -7,9 +7,7 @@ const SearchedVideoCard = ({
   description,
   channelName,
   channelImage,
-  views,
   time,
-  duration,
 }) => {
   const navigate = useNavigate();
 
@@ -22,7 +20,7 @@ const SearchedVideoCard = ({
           alt="thumbnail"
         />
         <span className="absolute bottom-2 right-2 p-0.5 bg-slate-950/75 rounded-md text-white text-xs group-hover:hidden">
-          {duration}
+          {"02:34"}
         </span>
       </div>
       <div className="mx-2 w-[720px]">
@@ -30,7 +28,7 @@ const SearchedVideoCard = ({
           {title}
         </h3>
         <p className="text-slate-500 text-sm font-normal">
-          {views} views • {time} ago
+          {"235K"} views • {time} ago
         </p>
         <div className="flex items-center gap-1 my-3">
           <img

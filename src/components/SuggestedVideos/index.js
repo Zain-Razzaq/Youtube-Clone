@@ -19,6 +19,7 @@ const SuggestedVideos = () => {
         }) => (
           <SuggestedCard
             key={id}
+            id={id}
             image={thumbnail}
             title={title}
             channelName={channelTitle}

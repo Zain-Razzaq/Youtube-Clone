@@ -1,4 +1,4 @@
-import { useState, useEffect, createContext } from "react";
+import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 
 import { getVideosDataFromAPI } from "../apiEndPoints";
@@ -13,11 +13,8 @@ import VideosCards from "../components/VideoCards";
 import LayoutBase from "../components/LayoutBase";
 import TagsBar from "../components/TagsBar";
 
-export const selectedButtonContext = createContext();
-
 const HomePage = () => {
   const dispatch = useDispatch();
-  const [selectedButton, setSelectedButton] = useState("Home");
 
   const sliceRequiredData = ({
     id,
@@ -48,12 +45,10 @@ const HomePage = () => {
   }, []);
 
   return (
-    <selectedButtonContext.Provider value={[selectedButton, setSelectedButton]}>
-      <LayoutBase>
-        <TagsBar />
-        <VideosCards />
-      </LayoutBase>
-    </selectedButtonContext.Provider>
+    <LayoutBase>
+      <TagsBar />
+      <VideosCards />
+    </LayoutBase>
   );
 };
 

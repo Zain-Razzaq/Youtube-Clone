@@ -2,7 +2,7 @@ import { useContext } from "react";
 
 import { HomeIcon, ShortsIcon, SubscriptionsIcon, FavoriteIcon } from "./icons";
 import MenuItem from "./MenuItem";
-import { selectedButtonContext } from "../../pages/HomePage";
+import { selectedButtonContext } from "../../App";
 
 const MenuBar = () => {
   const [selectedButton, setSelectedButton] = useContext(selectedButtonContext);

@@ -10,7 +10,6 @@ const AllRoutes = () => {
       <Route path="/" element={<HomePage />} />
       <Route path="/search/:searchQuery" element={<SearchPage />} />
       <Route path="/watch/:videoId" element={<WatchPage />} />
-      {/* dug56u8NN7g */}
     </Routes>
   );
 };

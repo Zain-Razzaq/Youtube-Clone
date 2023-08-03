@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import Card from "./Card";
 import { NO_OF_VIDEOS_PER_PAGE } from "../../constants";
 import Button from "../Button";
-import { selectedButtonContext } from "../../pages/HomePage";
+import { selectedButtonContext } from "../../App";
 
 const VideosCards = () => {
   const [selectedButton] = useContext(selectedButtonContext);

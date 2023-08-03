@@ -1,10 +1,16 @@
+import { createContext, useState } from "react";
+
 import AllRoutes from "./AppRoutes";
 
+export const selectedButtonContext = createContext();
+
 function App() {
+  const [selectedButton, setSelectedButton] = useState("Home");
+
   return (
-    <div className="App">
+    <selectedButtonContext.Provider value={[selectedButton, setSelectedButton]}>
       <AllRoutes />
-    </div>
+    </selectedButtonContext.Provider>
   );
 }
 

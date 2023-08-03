@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
+
 import {
   addToFavorites,
   removerFromFavorites,
@@ -35,7 +36,7 @@ const Card = ({
           src={image}
           alt="thumbnail"
         />
-        <div className="h-full w-full flex items-center justify-center  bg-slate-500/50 z-10 absolute -bottom-full group-hover:bottom-0 transition-all ">
+        <div className="h-full w-full flex items-center justify-center bg-slate-500/50 rounded-lg z-5 absolute -bottom-full group-hover:bottom-0 transition-all ">
           <svg
             fill={favorite ? "rgb(215,34,34)" : "none"}
             viewBox="0 0 24 24"

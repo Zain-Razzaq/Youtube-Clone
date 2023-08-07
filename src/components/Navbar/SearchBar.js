@@ -1,12 +1,14 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 import { SearchIcon } from "./icons";
 import { getSearchNavigator } from "../../routes";
 
 const SearchBar = () => {
+  const { searchQuery } = useParams();
+
   const [searchFocused, setSearchFocused] = useState(false);
-  const [searchText, setSearchText] = useState();
+  const [searchText, setSearchText] = useState(searchQuery);
   const navigate = useNavigate();
 
   const handelFormSubmit = () => {

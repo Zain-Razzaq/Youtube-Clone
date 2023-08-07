@@ -1,16 +1,16 @@
 import { createContext, useState } from "react";
 
-import AllRoutes from "./AppRoutes";
+import AppRoutes from "./AppRoutes";
 
-export const selectedButtonContext = createContext();
+export const SelectedButtonContext = createContext();
 
 function App() {
   const [selectedButton, setSelectedButton] = useState("Home");
 
   return (
-    <selectedButtonContext.Provider value={[selectedButton, setSelectedButton]}>
-      <AllRoutes />
-    </selectedButtonContext.Provider>
+    <SelectedButtonContext.Provider value={[selectedButton, setSelectedButton]}>
+      <AppRoutes />
+    </SelectedButtonContext.Provider>
   );
 }
 

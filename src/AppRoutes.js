@@ -4,7 +4,7 @@ import HomePage from "./pages/HomePage";
 import SearchPage from "./pages/SearchPage";
 import WatchPage from "./pages/WatchPage";
 
-const AllRoutes = () => {
+const AppRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
@@ -14,4 +14,4 @@ const AllRoutes = () => {
   );
 };
 
-export default AllRoutes;
+export default AppRoutes;

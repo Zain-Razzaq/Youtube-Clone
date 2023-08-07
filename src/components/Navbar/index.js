@@ -11,11 +11,12 @@ import {
   ProfileIcon,
 } from "./icons";
 import SearchBar from "./SearchBar";
-import { collapseContext } from "../LayoutBase";
+import { CollapseContext } from "../LayoutBase";
 
 const Navbar = () => {
-  const [collapse, setCollapse] = useContext(collapseContext);
+  const [collapse, setCollapse] = useContext(CollapseContext);
   const navigate = useNavigate();
+
   return (
     <nav className="flex flex-row justify-between items-center px-5 fixed w-full z-10 bg-white">
       <div className="flex items-center my-3">

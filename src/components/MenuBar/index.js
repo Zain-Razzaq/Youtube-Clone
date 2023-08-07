@@ -1,16 +1,21 @@
 import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 
 import { HomeIcon, ShortsIcon, SubscriptionsIcon, FavoriteIcon } from "./icons";
 import MenuItem from "./MenuItem";
-import { selectedButtonContext } from "../../App";
+import { SelectedButtonContext } from "../../App";
 
 const MenuBar = () => {
-  const [selectedButton, setSelectedButton] = useContext(selectedButtonContext);
+  const [selectedButton, setSelectedButton] = useContext(SelectedButtonContext);
+  const navigate = useNavigate();
+
   const handelClickOnHomeButton = () => {
     setSelectedButton("Home");
+    navigate("/");
   };
   const handelClickOnFavoriteButton = () => {
     setSelectedButton("Favorites");
+    navigate("/");
   };
 
   return (

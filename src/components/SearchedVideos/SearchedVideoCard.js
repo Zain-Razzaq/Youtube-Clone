@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { getWatchNavigator } from "../../routes";
+import { getWatchPageURL } from "../../routes";
 
 const SearchedVideoCard = ({
   id,
@@ -15,7 +15,7 @@ const SearchedVideoCard = ({
   return (
     <div
       className="flex h-52  m-2 "
-      onClick={() => navigate(getWatchNavigator(id))}
+      onClick={() => navigate(getWatchPageURL(id))}
     >
       <div className=" w-96 cursor-pointer relative group">
         <img

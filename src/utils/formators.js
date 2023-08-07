@@ -22,13 +22,15 @@ const getTimeInFormat = (publishedAt) => {
 };
 
 const getDurationInFormat = (duration) => {
-  const durationRegex = /PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?/;
+  const durationRegex = /P(?:(\d+)D)?T(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?/;
 
-  let [, hours, minutes, seconds] = duration.match(durationRegex);
+  let [, days, hours, minutes, seconds] = duration.match(durationRegex);
+  days = days ? String(days).padStart(2, "0") : "00";
   hours = hours ? String(hours).padStart(2, "0") : "00";
   minutes = minutes ? String(minutes).padStart(2, "0") : "00";
   seconds = seconds ? String(seconds).padStart(2, "0") : "00";
 
+  if (days !== "00") return `${days}:${hours}:${minutes}:${seconds}`;
   if (hours !== "00") return `${hours}:${minutes}:${seconds}`;
   if (minutes !== "00") return `${minutes}:${seconds}`;
   return `00:${seconds}`;

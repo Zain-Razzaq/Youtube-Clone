@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
 import { SearchIcon } from "./icons";
-import { getSearchNavigator } from "../../routes";
+import { getSearchPageURL } from "../../routes";
 
 const SearchBar = () => {
   const { searchQuery } = useParams();
@@ -13,7 +13,7 @@ const SearchBar = () => {
 
   const handelFormSubmit = () => {
     if (searchText) {
-      navigate(getSearchNavigator(searchText));
+      navigate(getSearchPageURL(searchText));
     }
   };
 

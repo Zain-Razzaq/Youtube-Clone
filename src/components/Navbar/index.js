@@ -12,7 +12,7 @@ import {
 } from "./icons";
 import SearchBar from "./SearchBar";
 import { CollapseContext } from "../LayoutBase";
-import { getRootNavigator } from "../../routes";
+import { getRootURL } from "../../routes";
 
 const Navbar = () => {
   const [collapse, setCollapse] = useContext(CollapseContext);
@@ -26,7 +26,7 @@ const Navbar = () => {
         </button>
         <div
           className="flex items-center cursor-pointer"
-          onClick={() => navigate(getRootNavigator())}
+          onClick={() => navigate(getRootURL())}
         >
           <YoutubeIcon />
           <span className="text-gray-500 text-xs mb-4">PK</span>

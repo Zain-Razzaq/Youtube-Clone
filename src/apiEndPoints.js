@@ -7,7 +7,7 @@ const getVideosDataFromAPI = () => {
         part: "snippet, statistics , contentDetails",
         chart: "mostPopular",
         maxResults: 30,
-        regionCode: "US",
+        regionCode: "PK",
         key: process.env.REACT_APP_YOUTUBE_API_KEY,
       },
     })
@@ -35,7 +35,7 @@ const getVidoesByCategory = (categoryID) => {
         part: "snippet, statistics , contentDetails",
         chart: "mostPopular",
         maxResults: 30,
-        regionCode: "US",
+        regionCode: "PK",
         videoCategoryId: categoryID,
         key: process.env.REACT_APP_YOUTUBE_API_KEY,
       },
@@ -50,7 +50,7 @@ const getVideoById = (videoId) => {
       params: {
         part: "snippet, statistics , contentDetails",
         maxResults: 30,
-        regionCode: "US",
+        regionCode: "PK",
         id: videoId,
         key: process.env.REACT_APP_YOUTUBE_API_KEY,
       },

@@ -2,10 +2,10 @@ import { useSelector } from "react-redux";
 
 import SuggestedCard from "./SuggestedCard";
 import Loader from "../../lib/Loader";
-import { getSuggestedVideosDataFromStore } from "../../store/suggestedVideosReducers/selector";
+import { suggestedVideosDataSelector } from "../../store/suggestedVideos/selector";
 
 const SuggestedVideos = () => {
-  const { data, isLoading } = useSelector(getSuggestedVideosDataFromStore);
+  const { data, isLoading } = useSelector(suggestedVideosDataSelector);
 
   return (
     <div className="felx felx-col">

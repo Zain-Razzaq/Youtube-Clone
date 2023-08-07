@@ -2,10 +2,10 @@ import { useSelector } from "react-redux";
 
 import SearchedVideoCard from "./SearchedVideoCard";
 import Loader from "../../lib/Loader";
-import { getSearchedVideosDataFromStore } from "../../store/searchPageReducers/selector";
+import { searchedVideosDataSelector } from "../../store/searchPage/selector";
 
 const SearchedVideos = () => {
-  const { data, isLoading } = useSelector(getSearchedVideosDataFromStore);
+  const { data, isLoading } = useSelector(searchedVideosDataSelector);
 
   return (
     <>

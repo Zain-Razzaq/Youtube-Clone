@@ -3,12 +3,12 @@ import { useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
 import LayoutBase from "../components/LayoutBase";
-import SuggestedVideos from "../components/SuggestedVideos/index";
+import SuggestedVideos from "../components/SuggestedVideos";
 
 import {
   updateSuggestedVideos,
   clearState,
-} from "../store/suggestedVideosReducers/suggestedVideosReducers";
+} from "../store/suggestedVideos/reducers";
 
 const WatchPage = () => {
   const { videoId } = useParams();

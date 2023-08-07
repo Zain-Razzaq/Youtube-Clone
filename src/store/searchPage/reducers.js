@@ -1,8 +1,8 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { getVideosDataForSearch } from "../../apiEndPoints";
-import { getTimeInFormat } from "../../utils/utils";
+import { getTimeInFormat } from "../../utils/formators";
 
-const sliceRequiredData = ({
+const requiredDataAdopter = ({
   id,
   snippet: {
     title,
@@ -30,7 +30,7 @@ const updateSearhedVideos = createAsyncThunk(
     const {
       data: { items },
     } = await getVideosDataForSearch(searchQuery);
-    return items.map(sliceRequiredData);
+    return items.map(requiredDataAdopter);
   }
 );
 

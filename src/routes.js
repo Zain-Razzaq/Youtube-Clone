@@ -1,13 +1,13 @@
-const getRootNavigator = () => {
+const getRootURL = () => {
   return "/";
 };
 
-const getSearchNavigator = (searchQuery) => {
+const getSearchPageURL = (searchQuery) => {
   return `/search/${searchQuery}`;
 };
 
-const getWatchNavigator = (videoId) => {
+const getWatchPageURL = (videoId) => {
   return `/watch/${videoId}`;
 };
 
-export { getRootNavigator, getSearchNavigator, getWatchNavigator };
+export { getRootURL, getSearchPageURL, getWatchPageURL };

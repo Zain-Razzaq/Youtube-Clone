@@ -6,10 +6,7 @@ import SearchedVideos from "../components/SearchedVideos";
 import TagsBar from "../components/TagsBar";
 import LayoutBase from "../components/LayoutBase";
 
-import {
-  clearState,
-  updateSearhedVideos,
-} from "../store/searchPageReducers/searchPageReducers";
+import { clearState, updateSearhedVideos } from "../store/searchPage/reducers";
 
 const SearchPage = () => {
   const { searchQuery } = useParams();

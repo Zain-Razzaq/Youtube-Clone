@@ -4,9 +4,9 @@ import {
   getViewsInFormat,
   getTimeInFormat,
   getDurationInFormat,
-} from "../../utils/utils";
+} from "../../utils/formators";
 
-const sliceRequiredData = ({
+const requiredDataAdopter = ({
   id,
   snippet: { title, channelId, channelTitle, publishedAt, thumbnails },
   contentDetails: { duration },
@@ -28,7 +28,7 @@ const updateVideosData = createAsyncThunk(
   "homePage/updateVideosData",
   async () => {
     const { items } = await getVideosDataFromAPI();
-    return items.map(sliceRequiredData);
+    return items.map(requiredDataAdopter);
   }
 );
 

@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 
-import { clearState, updateVideosData } from "../store/homePageReducer";
+import { clearState, updateVideosData } from "../store/homePageReducer/homePageReducer";
 
 import VideosCards from "../components/VideoCards";
 import LayoutBase from "../components/LayoutBase";

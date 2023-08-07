@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { SearchIcon } from "./icons";
+import { getSearchNavigator } from "../../routes";
 
 const SearchBar = () => {
   const [searchFocused, setSearchFocused] = useState(false);
@@ -10,7 +11,7 @@ const SearchBar = () => {
 
   const handelFormSubmit = () => {
     if (searchText) {
-      navigate(`/search/${searchText}`);
+      navigate(getSearchNavigator(searchText));
     }
   };
 

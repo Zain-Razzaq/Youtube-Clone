@@ -1,8 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 
-import HomePage from "./pages/HomePage";
-import SearchPage from "./pages/SearchPage";
-import WatchPage from "./pages/WatchPage";
+import { HomePage, SearchPage, WatchPage } from "./Pages/index";
 
 const AppRoutes = () => {
   return (

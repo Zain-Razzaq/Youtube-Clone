@@ -4,18 +4,20 @@ import { useNavigate } from "react-router-dom";
 import { HomeIcon, ShortsIcon, SubscriptionsIcon, FavoriteIcon } from "./icons";
 import MenuItem from "./MenuItem";
 import { SelectedButtonContext } from "../../App";
+import { getRootNavigator } from "../../routes";
+import { FAVORITE_BUTTON, HOME_BUTTON } from "./constants";
 
 const MenuBar = () => {
   const [selectedButton, setSelectedButton] = useContext(SelectedButtonContext);
   const navigate = useNavigate();
 
   const handelClickOnHomeButton = () => {
-    setSelectedButton("Home");
-    navigate("/");
+    setSelectedButton(HOME_BUTTON);
+    navigate(getRootNavigator());
   };
   const handelClickOnFavoriteButton = () => {
-    setSelectedButton("Favorites");
-    navigate("/");
+    setSelectedButton(FAVORITE_BUTTON);
+    navigate(getRootNavigator());
   };
 
   return (
@@ -23,9 +25,9 @@ const MenuBar = () => {
       <div className="my-2">
         <div onClick={handelClickOnHomeButton}>
           <MenuItem
-            icon={<HomeIcon selected={selectedButton === "Home"} />}
-            title="Home"
-            selected={selectedButton === "Home"}
+            icon={<HomeIcon selected={selectedButton === HOME_BUTTON} />}
+            title={HOME_BUTTON}
+            selected={selectedButton === HOME_BUTTON}
           />
         </div>
         <MenuItem icon={<ShortsIcon />} title="Shorts" />
@@ -33,9 +35,9 @@ const MenuBar = () => {
       </div>
       <div onClick={handelClickOnFavoriteButton}>
         <MenuItem
-          icon={<FavoriteIcon selected={selectedButton === "Favorites"} />}
-          title="Favorites"
-          selected={selectedButton === "Favorites"}
+          icon={<FavoriteIcon selected={selectedButton === FAVORITE_BUTTON} />}
+          title={FAVORITE_BUTTON}
+          selected={selectedButton === FAVORITE_BUTTON}
         />
       </div>
     </div>

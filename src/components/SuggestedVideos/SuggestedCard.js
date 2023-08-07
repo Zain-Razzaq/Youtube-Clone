@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import { getWatchNavigator } from "../../routes";
 
 const SuggestedCard = ({
   id,
@@ -14,7 +15,7 @@ const SuggestedCard = ({
     <div className="flex h-24 m-2">
       <div
         className=" w-40 cursor-pointer relative group"
-        onClick={() => navigate(`/watch/${id}`)}
+        onClick={() => navigate(getWatchNavigator(id))}
       >
         <img
           className="max-h-full w-full object-cover rounded-lg"

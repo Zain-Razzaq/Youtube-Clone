@@ -4,7 +4,8 @@ import { useDispatch } from "react-redux";
 import {
   addToFavorites,
   removerFromFavorites,
-} from "../../store/favoriteVideosReducers";
+} from "../../store/favoriteVideosReducers/favoriteVideosReducers";
+import { getWatchNavigator } from "../../routes";
 
 const Card = ({
   id,
@@ -52,7 +53,10 @@ const Card = ({
           {duration}
         </span>
       </div>
-      <div className="flex my-2" onClick={() => navigate(`/watch/${id}`)}>
+      <div
+        className="flex my-2"
+        onClick={() => navigate(getWatchNavigator(id))}
+      >
         <div className="w-12">
           <img
             className="w-10 h-10 rounded-full cursor-pointer"

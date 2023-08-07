@@ -1,10 +1,10 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { getVideosDataFromAPI } from "../apiEndPoints";
+import { getVideosDataFromAPI } from "../../apiEndPoints";
 import {
   getViewsInFormat,
   getTimeInFormat,
   getDurationInFormat,
-} from "../utils/utils";
+} from "../../utils/utils";
 
 const sliceRequiredData = ({
   id,

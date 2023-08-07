@@ -8,7 +8,7 @@ import SuggestedVideos from "../components/SuggestedVideos/index";
 import {
   updateSuggestedVideos,
   clearState,
-} from "../store/suggestedVideosReducers";
+} from "../store/suggestedVideosReducers/suggestedVideosReducers";
 
 const WatchPage = () => {
   const { videoId } = useParams();

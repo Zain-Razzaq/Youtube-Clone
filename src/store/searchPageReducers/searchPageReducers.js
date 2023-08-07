@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { getVideosDataForSearch } from "../apiEndPoints";
-import { getTimeInFormat } from "../utils/utils";
+import { getVideosDataForSearch } from "../../apiEndPoints";
+import { getTimeInFormat } from "../../utils/utils";
 
 const sliceRequiredData = ({
   id,

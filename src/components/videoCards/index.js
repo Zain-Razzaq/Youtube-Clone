@@ -5,15 +5,18 @@ import Card from "./Card";
 import { VIDEOS_PER_PAGE } from "./constants";
 import Button from "../../lib/Button";
 import { SelectedButtonContext } from "../../App";
-import Loader from "../../assets/Loader";
+import Loader from "../../lib/Loader";
+import { getVideosDataFromStore } from "../../store/homePageReducer/selector";
+import { getFavoriteVideosDataFromStore } from "../../store/favoriteVideosReducers/selector";
+import { FAVORITE_BUTTON } from "../MenuBar/constants";
 
 const VideosCards = () => {
   const [selectedButton] = useContext(SelectedButtonContext);
   const [currentPage, setCurrentPage] = useState(0);
 
-  let { data, isLoading } = useSelector((state) => state.videosData);
-  const favoriteVideos = useSelector((state) => state.favoriteVideos);
-  if (selectedButton === "Favorites") {
+  let { data, isLoading } = useSelector(getVideosDataFromStore);
+  const favoriteVideos = useSelector(getFavoriteVideosDataFromStore);
+  if (selectedButton === FAVORITE_BUTTON) {
     data = data.filter(({ id }) => favoriteVideos.includes(id));
   }
 
